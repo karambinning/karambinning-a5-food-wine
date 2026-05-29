@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A5 Food &amp; Wine — Off-licence &amp; Convenience · High Street South, Dunstable</title>
+<meta name="description" content="Independent off-licence and convenience shop at 1 Brittany Court, High Street South, Dunstable. Wines, spirits, beers, groceries, tobacco and news on the A5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F2EDDE;       /* warm cream */
+    --paper:#EAE2CC;    /* deeper cream for blocks */
+    --ink:#1B1A12;      /* near-black */
+    --olive:#2B2A1B;    /* castelvetrano deep */
+    --moss:#6C7544;     /* olive-leaf green */
+    --brass:#C9B26B;    /* brass accent */
+    --rule:rgba(27,26,18,.18);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Work Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  .serif{font-family:"Libre Baskerville", Georgia, serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 1.25rem}
+  .rule{border:0;border-top:1px solid var(--rule);margin:0}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:.9rem 1.25rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--olive);
+  }
+  .topbar .left{display:flex;gap:1.25rem;align-items:center}
+  .dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--moss);display:inline-block;vertical-align:middle;margin-right:.45rem}
+  .topbar .right{font-family:"Libre Baskerville",serif;letter-spacing:.04em;text-transform:none;font-style:italic;color:var(--olive)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:clamp(2.5rem,7vw,6.5rem) 0 clamp(2rem,5vw,4rem);
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1fr;gap:2rem}
+  .eyebrow{
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);
+    display:flex;align-items:center;gap:.75rem;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+  h1.wordmark{
+    font-family:"Libre Baskerville",serif;
+    font-weight:700;
+    font-size:clamp(3.4rem,10vw,9rem);
+    line-height:.92;
+    letter-spacing:-.02em;
+    margin:.4rem 0 0;
+    color:var(--olive);
+  }
+  h1.wordmark em{font-style:italic;color:var(--moss);font-weight:400}
+  .hero-lede{
+    font-family:"Libre Baskerville",serif;font-style:italic;
+    font-size:clamp(1.05rem,1.6vw,1.35rem);
+    color:var(--ink);max-width:48ch;margin:.5rem 0 0;
+  }
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:1.25rem 2.25rem;
+    margin-top:1.5rem;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--olive);
+  }
+  .hero-meta div span{display:block;font-family:"Libre Baskerville",serif;text-transform:none;font-style:italic;letter-spacing:0;color:var(--ink);font-size:1rem;margin-top:.15rem}
+
+  /* ---------- marquee ---------- */
+  .marquee{
+    background:var(--olive);color:var(--bg);
+    border-top:1px solid var(--olive);border-bottom:1px solid var(--olive);
+    overflow:hidden;padding:1.1rem 0;
+  }
+  .marquee-track{
+    display:flex;gap:3rem;white-space:nowrap;
+    font-family:"Libre Baskerville",serif;font-size:1.35rem;letter-spacing:.04em;
+    animation:slide 38s linear infinite;
+  }
+  .marquee-track span{display:inline-flex;align-items:center;gap:3rem}
+  .marquee-track span::after{content:"✦";color:var(--brass);font-size:1rem}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion: reduce){.marquee-track{animation:none}}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(2.75rem,6vw,5.5rem) 0;border-bottom:1px solid var(--rule)}
+  .section-head{display:grid;grid-template-columns:1fr;gap:.4rem;margin-bottom:2rem}
+  .section-head .num{
+    font-family:"Libre Baskerville",serif;font-style:italic;color:var(--moss);
+    font-size:.95rem;letter-spacing:.02em;
+  }
+  .section-head h2{
+    font-family:"Libre Baskerville",serif;font-weight:700;
+    font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.02;letter-spacing:-.01em;
+    margin:0;color:var(--olive);
+  }
+
+  /* stock grid */
+  .stock{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  .stock article{
+    background:var(--paper);
+    border:1px solid var(--rule);
+    padding:1.4rem 1.25rem;
+  }
+  .stock h3{
+    font-family:"Libre Baskerville",serif;font-weight:700;font-size:1.2rem;margin:0 0 .35rem;color:var(--ink);
+  }
+  .stock p{margin:0;color:#3a382b;font-size:.95rem}
+  @media(min-width:780px){.stock{grid-template-columns:repeat(3,1fr)}}
+
+  /* find us / hours panel */
+  .findus{display:grid;grid-template-columns:1fr;gap:2rem}
+  @media(min-width:780px){.findus{grid-template-columns:1.1fr .9fr}}
+  .addr-card{
+    background:var(--olive);color:var(--bg);
+    padding:clamp(1.5rem,3vw,2.5rem);
+    position:relative;
+  }
+  .addr-card .label{
+    font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);
+    margin-bottom:.75rem;
+  }
+  .addr-card address{
+    font-style:normal;font-family:"Libre Baskerville",serif;
+    font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.35;color:var(--bg);
+  }
+  .addr-card .what3{margin-top:1rem;font-size:.85rem;color:var(--brass);font-family:"Work Sans",sans-serif;letter-spacing:.04em}
+  .addr-card a.dir{
+    display:inline-block;margin-top:1.5rem;
+    border:1px solid var(--brass);color:var(--brass);
+    padding:.65rem 1.1rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    transition:background .2s ease,color .2s ease;
+  }
+  .addr-card a.dir:hover{background:var(--brass);color:var(--olive)}
+  .hours-card{
+    background:var(--paper);border:1px solid var(--rule);
+    padding:clamp(1.5rem,3vw,2.5rem);
+    display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;
+  }
+  .hours-card .label{
+    font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--moss);
+    margin-bottom:.75rem;
+  }
+  .hours-card p{
+    font-family:"Libre Baskerville",serif;font-style:italic;
+    font-size:1.05rem;line-height:1.5;margin:0;color:#332f1f;
+  }
+  .hours-card .note{
+    font-family:"Work Sans",sans-serif;font-style:normal;font-size:.85rem;color:#4a4732;
+    border-top:1px solid var(--rule);padding-top:1rem;
+  }
+
+  /* hygiene panel */
+  .hygiene{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:center;padding:1.5rem;background:var(--paper);border:1px solid var(--rule)}
+  .hygiene .stars{
+    font-family:"Libre Baskerville",serif;font-weight:700;color:var(--moss);
+    font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;letter-spacing:-.02em;
+  }
+  .hygiene .stars small{display:block;font-family:"Work Sans",sans-serif;font-weight:500;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-top:.35rem}
+  .hygiene p{margin:0;color:#3a382b;font-size:.95rem;line-height:1.5;max-width:52ch}
+  .hygiene p strong{color:var(--olive)}
+
+  /* footer */
+  footer{padding:2.5rem 0 3rem;color:var(--olive)}
+  .foot{display:grid;grid-template-columns:1fr;gap:1.25rem;font-size:.82rem}
+  @media(min-width:780px){.foot{grid-template-columns:1.4fr 1fr 1fr;align-items:end}}
+  .foot .brand{font-family:"Libre Baskerville",serif;font-style:italic;font-size:1.1rem;color:var(--olive)}
+  .foot .meta{color:#4a4732;line-height:1.6}
+  .foot .meta strong{color:var(--olive);font-weight:600;letter-spacing:.04em}
+
+  /* scroll-driven reveal */
+  @supports (animation-timeline: view()){
+    .reveal{animation:rise both;animation-timeline:view();animation-range:entry 0% cover 25%}
+    @keyframes rise{from{opacity:0;transform:translateY(1.5rem)}to{opacity:1;transform:translateY(0)}}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="left"><span><span class="dot"></span>Open as an independent off-licence &amp; convenience shop</span></div>
+  <div class="right">Brittany Court · LU6 3HR</div>
+</div>
+<hr class="rule">
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">High Street South · Dunstable · est. on the A5</div>
+    <h1 class="wordmark">A5 Food<br><em>&amp; Wine.</em></h1>
+    <p class="hero-lede">A neighbourhood off-licence and convenience shop tucked into Brittany Court, sitting right on the A5 as it threads through Dunstable’s High Street South.</p>
+    <div class="hero-meta">
+      <div>Address<span>1 Brittany Court, LU6 3HR</span></div>
+      <div>Authority<span>Central Bedfordshire</span></div>
+      <div>Hygiene<span>5★ Good · FSA, 2023</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Wines</span><span>Spirits</span><span>Beers &amp; Ales</span><span>Groceries</span><span>Tobacco</span><span>Newsagent</span><span>Confectionery</span><span>Soft Drinks</span>
+    <span>Wines</span><span>Spirits</span><span>Beers &amp; Ales</span><span>Groceries</span><span>Tobacco</span><span>Newsagent</span><span>Confectionery</span><span>Soft Drinks</span>
+  </div>
+</div>
+
+<section id="stock">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="num">01 — On the shelves</div>
+      <h2>The shop in a sentence:<br>everyday essentials, with the wine taken seriously.</h2>
+    </div>
+    <div class="stock">
+      <article class="reveal"><h3>Wines</h3><p>The everyday bottle and the occasional one. Old-world, new-world, and a small house selection chosen by the counter.</p></article>
+      <article class="reveal"><h3>Spirits</h3><p>The names you’d expect on a back-bar shelf, plus a working selection of mixers kept cold next to them.</p></article>
+      <article class="reveal"><h3>Beers &amp; Ales</h3><p>British lagers, continental imports, and craft cans as space allows. Singles, four-packs and multipacks.</p></article>
+      <article class="reveal"><h3>Groceries</h3><p>Bread, milk, tinned goods, snacks, cereals and the small things you ran out of on the way home.</p></article>
+      <article class="reveal"><h3>Tobacco</h3><p>Cigarettes, rolling tobacco, papers, filters and lighters — kept behind the counter, served on request.</p></article>
+      <article class="reveal"><h3>News &amp; Sweets</h3><p>The daily papers, magazines, confectionery, ice cream and soft drinks. The corner-shop staples done properly.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="num">02 — Find us</div>
+      <h2>On High Street South,<br>between the town centre and the A5 roundabout.</h2>
+    </div>
+    <div class="findus">
+      <div class="addr-card reveal">
+        <div class="label">The shop</div>
+        <address>
+          A5 Food &amp; Wine<br>
+          1 Brittany Court<br>
+          High Street South<br>
+          Dunstable, Bedfordshire<br>
+          LU6 3HR
+        </address>
+        <a class="dir" href="https://www.google.com/maps/search/?api=1&query=A5+Food+%26+Wine+1+Brittany+Court+High+Street+South+Dunstable+LU6+3HR" target="_blank" rel="noopener">Open in Maps →</a>
+      </div>
+      <div class="hours-card reveal">
+        <div>
+          <div class="label">Opening hours</div>
+          <p>Drop in on your way through Dunstable — the shop keeps regular off-licence hours, but the published times haven’t been verified for this site yet.</p>
+        </div>
+        <div class="note">If you’re planning a special run, call into the shop first to confirm we’re open. Verified hours and a phone number will appear here once published.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="standards">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="num">03 — Standards</div>
+      <h2>Independently rated, on the public register.</h2>
+    </div>
+    <div class="hygiene reveal">
+      <div class="stars">5 / 5<small>FSA Food Hygiene Rating</small></div>
+      <p><strong>Good</strong> across hygienic food handling, cleanliness &amp; condition of the premises, and food-safety management. Inspected by Central Bedfordshire Council on 20 March 2023 and published on the Food Standards Agency register.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand">A5 Food &amp; Wine — High Street South, Dunstable.</div>
+    <div class="meta"><strong>Address</strong><br>1 Brittany Court, High Street South<br>Dunstable, Beds, LU6 3HR</div>
+    <div class="meta"><strong>Trading as</strong><br>A5 Food &amp; Wine Limited<br>Companies House № 10063931</div>
+  </div>
+</footer>
+
+</body>
+</html>
